@@ -1,0 +1,20 @@
+print('''--- Clasificador de 
+      Letras (Presiona Espacio para salir) ---''')
+#Hacemos un siglo do-while para permitir al usuario ingresar letras hasta que decida salir
+while True:
+    entrada = input("Ingresa una letra: ")
+
+    # Si ingresa un espacio o presiona enter vacío, termina el programa
+    if entrada == " " or entrada == "":
+        print("Programa finalizado.")
+        break
+
+    # Nos aseguramos de que haya ingresado solo un caracter y que sea una letra
+    if len(entrada) == 1 and entrada.isalpha():
+        letra = entrada.lower()
+        if letra in "aeiouáéíóú":
+            print(f"'{entrada}' es una VOCAL.\n")
+        else:
+            print(f"'{entrada}' es una CONSONANTE.\n")
+    else:
+        print("Error: Por favor, ingresa solo una letra individual.\n")
